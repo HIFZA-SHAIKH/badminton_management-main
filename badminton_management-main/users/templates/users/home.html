@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Home | Badminton Management{% endblock %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1 class="display-4 mb-4">🏸 Welcome to the Badminton Management System!</h1>
+    <p class="lead mb-4">Efficiently manage memberships, court bookings, tournaments, and more.</p>
+    <a href="{% url 'login' %}" class="btn btn-primary btn-lg">Login to Get Started</a>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Manage Players</h3>
+            <p>Keep track of player profiles, memberships, and performance data easily.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Schedule Matches</h3>
+            <p>Organize tournaments, schedule matches, and manage court bookings in minutes.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Generate Reports</h3>
+            <p>Access detailed reports and dashboards with just a few clicks.</p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

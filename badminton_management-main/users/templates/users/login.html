@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+<h2 style="text-align: center; font-family: Arial, sans-serif; color: #333;">Login</h2>
+<form method="post" style="max-width: 400px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
+    {% csrf_token %}
+    {{form|crispy}}
+    <button type="submit" style="width: 100%; padding: 10px; background-color: #007BFF; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">Login</button>
+
+<!-- Forgot Password link -->
+<div style="text-align: center; margin-top: 15px;">
+    <a href="{% url 'password_reset' %}" style="color: #007BFF; text-decoration: none; font-family: Arial, sans-serif;">
+        Forgot Password?
+    </a>
+</div>
+
+</form>
+{% for message in messages %}
+<p style="text-align: center; color: red; font-family: Arial, sans-serif;">{{ message }}</p>
+{% endfor %}
+{% endblock %}
